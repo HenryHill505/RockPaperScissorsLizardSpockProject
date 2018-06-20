@@ -6,7 +6,27 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    class Player
+    public abstract class Player
     {
+        //member variables
+        int name;
+        int winCount;
+
+        //constructor
+        public Player()
+        {
+             
+        }
     }
+
+    public class HumanPlayer : Player
+    {
+
+    }
+
+    public class ComputerPlayer : Player
+    {
+
+    }
+
 }
