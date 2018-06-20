@@ -8,5 +8,9 @@ namespace RockPaperScissorsLizardSpock
 {
     public class GameMaster
     {
+        public GameMaster()
+        {
+
+        }
     }
 }
