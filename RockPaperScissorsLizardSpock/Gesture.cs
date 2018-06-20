@@ -8,5 +8,34 @@ namespace RockPaperScissorsLizardSpock
 {
     public abstract class Gesture
     {
+        public Gesture()
+        {
+
+        }
+    }
+
+    public class Rock : Gesture
+    {
+
+    }
+
+    public class Lizard : Gesture
+    {
+
+    }
+
+    public class Spock : Gesture
+    {
+
+    }
+
+    public class Scissors : Gesture
+    {
+
+    }
+
+    public class Paper : Gesture
+    {
+
     }
 }
