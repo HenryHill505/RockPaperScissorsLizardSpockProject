@@ -42,6 +42,7 @@ namespace RockPaperScissorsLizardSpock
             while (!int.TryParse(inputString, out gestureChoice) || gestureChoice>gestureList.Count || gestureChoice <= 0)
             {
                 Console.WriteLine("Invalid input. Enter the number corresponding to your choice");
+                inputString = Console.ReadLine();
             }
 
             chosenGesture = gestureList[gestureChoice - 1];
