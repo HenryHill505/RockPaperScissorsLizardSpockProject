@@ -31,7 +31,7 @@ namespace RockPaperScissorsLizardSpock
             foreach (Gesture gesture in gestureList)
             {
                 count++;
-                Console.Write($"{count}. {gesture.name} ");
+                Console.Write($"{count}.{gesture.name} ");
             }
             Console.WriteLine("");
             string inputString = Console.ReadLine();

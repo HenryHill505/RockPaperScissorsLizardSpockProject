@@ -49,7 +49,7 @@ namespace RockPaperScissorsLizardSpock
             
             while(!int.TryParse(gameLengthinput, out gameLength) || gameLength < 3)
             {
-                Console.WriteLine("Error. The number of round wins must be an integer greater than 3");
+                Console.WriteLine("Error. The number of round wins must be an integer greater than 2");
                 gameLengthinput = Console.ReadLine();
             }
         }
