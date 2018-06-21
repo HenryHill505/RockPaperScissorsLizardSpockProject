@@ -46,7 +46,6 @@ namespace RockPaperScissorsLizardSpock
         {
             this.name = "Scissors";
         }
-
     }
 
     public class Paper : Gesture
@@ -55,6 +54,5 @@ namespace RockPaperScissorsLizardSpock
         {
             this.name = "Paper";
         }
-
     }
 }
