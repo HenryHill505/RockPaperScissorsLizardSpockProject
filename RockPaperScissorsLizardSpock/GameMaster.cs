@@ -18,8 +18,8 @@ namespace RockPaperScissorsLizardSpock
 
         public Player CompareGestures()
         {
-            string player2choice = player2.chosenGesture.name;
-            switch (player1.chosenGesture.name)
+            string player2choice = player2.chosenGesture;
+            switch (player1.chosenGesture)
             {
                 case "Rock":
                     if (player2choice == "Rock") { return null; } else if (player2choice == "Scissors" || player2choice == "Lizard"){return player1; } else { return player2; }
@@ -113,8 +113,8 @@ namespace RockPaperScissorsLizardSpock
             player1.ChooseGesture();
             player2.ChooseGesture();
 
-            Console.WriteLine($"{player1.name} chose: {player1.chosenGesture.name}");
-            Console.WriteLine($"{player2.name} chose: {player2.chosenGesture.name}");
+            Console.WriteLine($"{player1.name} chose: {player1.chosenGesture}");
+            Console.WriteLine($"{player2.name} chose: {player2.chosenGesture}");
             Player winningPlayer = CompareGestures();
             if (winningPlayer == null)
             {

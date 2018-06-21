@@ -10,13 +10,13 @@ namespace RockPaperScissorsLizardSpock
     {
         public string name;
         public int winCount;
-        public Gesture chosenGesture;
-        public List<Gesture> gestureList;
+        public string chosenGesture;
+        public List<string> gestureList;
 
         public Player()
         {
             winCount = 0;
-            gestureList = new List<Gesture>() { new Rock(), new Paper(), new Scissors(), new Lizard(), new Spock() };
+            gestureList = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
         }
 
         public abstract void ChooseGesture();
@@ -28,10 +28,10 @@ namespace RockPaperScissorsLizardSpock
         {
             Console.WriteLine($"{name}, Select a gesture: ");
             int count = 0;
-            foreach (Gesture gesture in gestureList)
+            foreach (string gesture in gestureList)
             {
                 count++;
-                Console.Write($"{count}.{gesture.name} ");
+                Console.Write($"{count}.{gesture} ");
             }
             Console.WriteLine("");
             string inputString = Console.ReadLine();
