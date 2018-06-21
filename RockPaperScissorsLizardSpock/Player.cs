@@ -9,13 +9,13 @@ namespace RockPaperScissorsLizardSpock
     public abstract class Player
     {
         //member variables
-        int name;
-        int winCount;
+        public int name;
+        public int winCount;
 
         //constructor
         public Player()
         {
-             
+            winCount = 0;
         }
     }
 
