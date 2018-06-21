@@ -60,8 +60,6 @@ namespace RockPaperScissorsLizardSpock
         {
             Random random = new Random();
             int randomNumber = random.Next(0, 5);
-            Console.WriteLine("Random Number" + randomNumber);
-
             chosenGesture = gestureList[randomNumber];
         }
     }
