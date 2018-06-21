@@ -9,7 +9,7 @@ namespace RockPaperScissorsLizardSpock
     public abstract class Player
     {
         //member variables
-        public int name;
+        public string name;
         public int winCount;
         public Gesture chosenGesture;
         public List<Gesture> gestureList;
@@ -50,6 +50,11 @@ namespace RockPaperScissorsLizardSpock
 
     public class ComputerPlayer : Player
     {
+        public ComputerPlayer()
+        {
+            this.name = "Computer";
+        }
+
         public override void ChooseGesture()
         {
             Random random = new Random();

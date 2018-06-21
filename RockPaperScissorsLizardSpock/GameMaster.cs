@@ -51,12 +51,16 @@ namespace RockPaperScissorsLizardSpock
         public void CreatePlayers()
         {
             player1 = new HumanPlayer();
+            Console.WriteLine("Player 1, please enter your name");
+            player1.name = Console.ReadLine();
             switch(GetPlayerCount()){
                 case "1":
                     player2 = new ComputerPlayer();
                     break;
                 case "2":
                     player2 = new HumanPlayer();
+                    Console.WriteLine("Player 2, please enter your name");
+                    player2.name = Console.ReadLine();
                     break;
                 default:
                     Console.WriteLine("Error: Entered invalid number of players");
