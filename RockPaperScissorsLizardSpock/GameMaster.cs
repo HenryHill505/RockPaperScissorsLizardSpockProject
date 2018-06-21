@@ -72,11 +72,11 @@ namespace RockPaperScissorsLizardSpock
         {
             if (player1.winCount >= 3)
             {
-                Console.WriteLine("Player 1 won the game!");
+                Console.WriteLine("player1.name won the game!");
             }
             else if (player2.winCount >= 3)
             {
-                Console.WriteLine("Player 2 won the game!");
+                Console.WriteLine("player2.name won the game!");
             }
             Console.ReadLine();
         }
@@ -96,8 +96,8 @@ namespace RockPaperScissorsLizardSpock
             player1.ChooseGesture();
             player2.ChooseGesture();
 
-            Console.WriteLine("Player 1 chose: " + player1.chosenGesture.name);
-            Console.WriteLine("Player 2 chose: " + player2.chosenGesture.name);
+            Console.WriteLine("player1.name chose: " + player1.chosenGesture.name);
+            Console.WriteLine("player2.name chose: " + player2.chosenGesture.name);
             Player winningPlayer = CompareGestures();
             if (winningPlayer == null)
             {
@@ -107,7 +107,7 @@ namespace RockPaperScissorsLizardSpock
             {
                 winningPlayer.winCount++;
             }
-            Console.WriteLine("Player 1: " + player1.winCount + " Player 2: " + player2.winCount);
+            Console.WriteLine("player1.name: " + player1.winCount + " player2.name: " + player2.winCount);
         }
     }
 }
