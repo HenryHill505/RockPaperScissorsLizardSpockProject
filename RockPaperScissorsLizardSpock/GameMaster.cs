@@ -10,6 +10,7 @@ namespace RockPaperScissorsLizardSpock
     {
         Player player1;
         Player player2;
+        int gameLength;
         public GameMaster()
         {
 
@@ -39,6 +40,17 @@ namespace RockPaperScissorsLizardSpock
                     Console.WriteLine("CompareGestures() is BROKEN");
                     return null;
                     break;
+            }
+        }
+        public void GetGameLength()
+        {
+            Console.WriteLine("How many round wins to win the game?");
+            string gameLengthinput = Console.ReadLine();
+            
+            while(!int.TryParse(gameLengthinput, out gameLength) || gameLength < 3)
+            {
+                Console.WriteLine("Error. The number of round wins must be an integer greater than 3");
+                gameLengthinput = Console.ReadLine();
             }
         }
         public string GetPlayerCount()
@@ -73,11 +85,12 @@ namespace RockPaperScissorsLizardSpock
 
         public void DisplayGameResults()
         {
-            if (player1.winCount >= 3)
+            Console.ReadLine();
+            if (player1.winCount >= gameLength)
             {
                 Console.WriteLine($"{player1.name} won the game!");
             }
-            else if (player2.winCount >= 3)
+            else if (player2.winCount >= gameLength)
             {
                 Console.WriteLine($"{player2.name} won the game!");
             }
@@ -87,7 +100,8 @@ namespace RockPaperScissorsLizardSpock
         public void RunGame()
         {
             CreatePlayers();
-            while(player1.winCount < 3 && player2.winCount < 3)
+            GetGameLength();
+            while(player1.winCount < gameLength && player2.winCount < gameLength)
             {
                 RunRound();    
             }
@@ -113,7 +127,6 @@ namespace RockPaperScissorsLizardSpock
             }
             Console.ReadLine();
             Console.WriteLine($"{player1.name}: {player1.winCount} {player2.name}: {player2.winCount}");
-            Console.ReadLine();
         }
     }
 }
