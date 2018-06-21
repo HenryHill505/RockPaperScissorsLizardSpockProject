@@ -64,6 +64,7 @@ namespace RockPaperScissorsLizardSpock
                     break;
                 default:
                     Console.WriteLine("Error: Entered invalid number of players");
+                    CreatePlayers();
                     break;
             }
         }
@@ -72,7 +73,7 @@ namespace RockPaperScissorsLizardSpock
         {
             if (player1.winCount >= 3)
             {
-                Console.WriteLine(player1.name + "won the game!");
+                Console.WriteLine(player1.name + " won the game!");
             }
             else if (player2.winCount >= 3)
             {
@@ -107,7 +108,9 @@ namespace RockPaperScissorsLizardSpock
             {
                 winningPlayer.winCount++;
             }
+            Console.ReadLine();
             Console.WriteLine(player1.name + ": " + player1.winCount +" " + player2.name + ": " + player2.winCount);
+            Console.ReadLine();
         }
     }
 }
