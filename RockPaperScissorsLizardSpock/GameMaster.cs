@@ -22,6 +22,9 @@ namespace RockPaperScissorsLizardSpock
             return Console.ReadLine();
         }
 
+
+
+
         public void CreatePlayers()
         {
             player1 = new HumanPlayer();
@@ -36,6 +39,25 @@ namespace RockPaperScissorsLizardSpock
                     Console.WriteLine("Error: Entered invalid number of players");
                     break;
             }
+        }
+
+        public void RunGame()
+        {
+            CreatePlayers();
+            while(player1.winCount < 3 && player2.winCount < 3)
+            {
+                RunRound();    
+            }
+        }
+
+        public void RunRound()
+        {
+            player1.ChooseGesture();
+            player2.ChooseGesture();
+
+            Console.WriteLine("Player 1 chose: " + player1.chosenGesture);
+            Console.WriteLine("Player 2 chose: " + player2.chosenGesture);
+            Console.ReadLine();
         }
     }
 }

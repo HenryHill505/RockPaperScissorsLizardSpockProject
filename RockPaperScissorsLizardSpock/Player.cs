@@ -50,7 +50,10 @@ namespace RockPaperScissorsLizardSpock
 
     public class ComputerPlayer : Player
     {
-
+        public override void ChooseGesture()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
