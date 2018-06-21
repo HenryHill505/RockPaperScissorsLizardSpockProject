@@ -64,7 +64,7 @@ namespace RockPaperScissorsLizardSpock
             }
         }
 
-        public void DisplayEndgame()
+        public void DisplayGameResults()
         {
             if (player1.winCount >= 3)
             {
@@ -72,7 +72,7 @@ namespace RockPaperScissorsLizardSpock
             }
             else if (player2.winCount >= 3)
             {
-                Console.WriteLine("Player 2 won the game!)";
+                Console.WriteLine("Player 2 won the game!");
             }
             Console.ReadLine();
         }
@@ -84,7 +84,7 @@ namespace RockPaperScissorsLizardSpock
             {
                 RunRound();    
             }
-            DisplayEndgame();
+            DisplayGameResults();
         }
 
         public void RunRound()
