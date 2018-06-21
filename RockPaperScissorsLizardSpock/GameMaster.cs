@@ -16,6 +16,28 @@ namespace RockPaperScissorsLizardSpock
 
         }
 
+        public Player CompareGestures()
+        {
+            string player2choice = player2.chosenGesture.name;
+            switch (player1.chosenGesture.name)
+            {
+                case "Rock":
+                    if (player2choice == "Scissors" || player2choice == "Lizard"){return player1; } else { return player2; }
+                    break;
+                case "Scissors":
+                    if (player2choice == "Paper" || player2choice == "Lizard") { return player1; } else { return player2; }
+                    break;
+                case "Paper":
+                    if (player2choice == "Rock" || player2choice == "Spock") { return player1; } else { return player2; }
+                    break;
+                case "Lizard":
+                    if (player2choice == "Paper" || player2choice == "Spock") { return player1; } else { return player2; }
+                    break;
+                case "Spock":
+                    if (player2choice == "Scissors" || player2choice == "Rock") { return player1; } else { return player2; }
+                    break;
+            }
+        }
         public string GetPlayerCount()
         {
             Console.WriteLine("1 player game or 2 player game?");
