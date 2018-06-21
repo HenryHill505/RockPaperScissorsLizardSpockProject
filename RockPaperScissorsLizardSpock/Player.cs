@@ -20,19 +20,18 @@ namespace RockPaperScissorsLizardSpock
         }
 
         public abstract void ChooseGesture();
-        
     }
 
     public class Human : Player
     {
         public override void ChooseGesture()
         {
-            Console.WriteLine(name + ", Select a gesture: ");
+            Console.WriteLine($"{name}, Select a gesture: ");
             int count = 0;
             foreach (Gesture gesture in gestureList)
             {
                 count++;
-                Console.Write(count + ". " + gesture.name + "   ");
+                Console.Write($"{count}. {gesture.name} ");
             }
             Console.WriteLine("");
             string inputString = Console.ReadLine();
