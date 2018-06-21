@@ -20,46 +20,6 @@ namespace RockPaperScissorsLizardSpock
         }
 
         public abstract void ChooseGesture();
-    }
-
-    public class Human : Player
-    {
-        public override void ChooseGesture()
-        {
-            Console.WriteLine($"{name}, Select a gesture: ");
-            int count = 0;
-            foreach (string gesture in gestureList)
-            {
-                count++;
-                Console.Write($"{count}.{gesture} ");
-            }
-            Console.WriteLine("");
-            string inputString = Console.ReadLine();
-            int gestureChoice;
-            
-            while (!int.TryParse(inputString, out gestureChoice) || gestureChoice>gestureList.Count || gestureChoice <= 0)
-            {
-                Console.WriteLine("Invalid input. Enter the number corresponding to your choice");
-                inputString = Console.ReadLine();
-            }
-
-            chosenGesture = gestureList[gestureChoice - 1];
-        }
-    }
-
-    public class Computer : Player
-    {
-        public Computer()
-        {
-            this.name = "Computer";
-        }
-
-        public override void ChooseGesture()
-        {
-            Random random = new Random();
-            int randomNumber = random.Next(0, 5);
-            chosenGesture = gestureList[randomNumber];
-        }
-    }
+    } 
 
 }

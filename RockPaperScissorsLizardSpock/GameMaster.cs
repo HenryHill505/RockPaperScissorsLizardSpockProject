@@ -23,23 +23,17 @@ namespace RockPaperScissorsLizardSpock
             {
                 case "Rock":
                     if (player2choice == "Rock") { return null; } else if (player2choice == "Scissors" || player2choice == "Lizard"){return player1; } else { return player2; }
-                    break;
                 case "Scissors":
                     if (player2choice == "Scissors") { return null; } else if (player2choice == "Paper" || player2choice == "Lizard") { return player1; } else { return player2; }
-                    break;
                 case "Paper":
                     if (player2choice == "Paper") { return null; } else if (player2choice == "Rock" || player2choice == "Spock") { return player1; } else { return player2; }
-                    break;
                 case "Lizard":
                     if (player2choice == "Lizard") { return null; } else if (player2choice == "Paper" || player2choice == "Spock") { return player1; } else { return player2; }
-                    break;
                 case "Spock":
                     if (player2choice == "Spock") { return null; } else if (player2choice == "Scissors" || player2choice == "Rock") { return player1; } else { return player2; }
-                    break;
                 default:
                     Console.WriteLine("CompareGestures() is BROKEN");
                     return null;
-                    break;
             }
         }
         public void GetGameLength()
