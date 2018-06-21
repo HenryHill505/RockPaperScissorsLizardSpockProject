@@ -8,7 +8,6 @@ namespace RockPaperScissorsLizardSpock
 {
     public class GameMaster
     {
-        //member variables
         Player player1;
         Player player2;
         public GameMaster()
@@ -52,14 +51,14 @@ namespace RockPaperScissorsLizardSpock
         {
             switch(GetPlayerCount()){
                 case "1":
-                    player1 = new HumanPlayer();
+                    player1 = new Human();
                     Console.WriteLine("Player 1, please enter your name");
                     player1.name = Console.ReadLine();
-                    player2 = new ComputerPlayer();
+                    player2 = new Computer();
                     break;
                 case "2":
-                    player1 = new HumanPlayer();
-                    player2 = new HumanPlayer();
+                    player1 = new Human();
+                    player2 = new Human();
                     Console.WriteLine("Player 1, please enter your name");
                     player1.name = Console.ReadLine();
                     Console.WriteLine("Player 2, please enter your name");

@@ -8,13 +8,11 @@ namespace RockPaperScissorsLizardSpock
 {
     public abstract class Player
     {
-        //member variables
         public string name;
         public int winCount;
         public Gesture chosenGesture;
         public List<Gesture> gestureList;
 
-        //constructor
         public Player()
         {
             winCount = 0;
@@ -25,7 +23,7 @@ namespace RockPaperScissorsLizardSpock
         
     }
 
-    public class HumanPlayer : Player
+    public class Human : Player
     {
         public override void ChooseGesture()
         {
@@ -50,9 +48,9 @@ namespace RockPaperScissorsLizardSpock
         }
     }
 
-    public class ComputerPlayer : Player
+    public class Computer : Player
     {
-        public ComputerPlayer()
+        public Computer()
         {
             this.name = "Computer";
         }
