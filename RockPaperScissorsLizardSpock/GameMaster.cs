@@ -53,11 +53,13 @@ namespace RockPaperScissorsLizardSpock
         public void RunRound()
         {
             player1.ChooseGesture();
+
             player2.ChooseGesture();
 
             Console.WriteLine("Player 1 chose: " + player1.chosenGesture);
             Console.WriteLine("Player 2 chose: " + player2.chosenGesture);
-            Console.ReadLine();
+            Player winningPlayer = CompareGestures();
+            winningPlayer.winCount++;
         }
     }
 }
