@@ -18,7 +18,7 @@ namespace RockPaperScissorsLizardSpock
         public Player()
         {
             winCount = 0;
-            gestureList = new List<Gesture>() { new Rock(), new Lizard(), new Spock(), new Scissors(), new Paper() };
+            gestureList = new List<Gesture>() { new Rock(), new Paper(), new Scissors(), new Lizard(), new Spock() };
         }
 
         public abstract void ChooseGesture();
@@ -29,13 +29,14 @@ namespace RockPaperScissorsLizardSpock
     {
         public override void ChooseGesture()
         {
-            Console.WriteLine("Select a gesture: ");
+            Console.WriteLine(name + ", Select a gesture: ");
             int count = 0;
             foreach (Gesture gesture in gestureList)
             {
                 count++;
                 Console.Write(count + ". " + gesture.name + "   ");
             }
+            Console.WriteLine("");
             string inputString = Console.ReadLine();
             int gestureChoice;
             

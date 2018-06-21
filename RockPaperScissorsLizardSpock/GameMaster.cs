@@ -50,20 +50,23 @@ namespace RockPaperScissorsLizardSpock
 
         public void CreatePlayers()
         {
-            player1 = new HumanPlayer();
-            Console.WriteLine("Player 1, please enter your name");
-            player1.name = Console.ReadLine();
             switch(GetPlayerCount()){
                 case "1":
+                    player1 = new HumanPlayer();
+                    Console.WriteLine("Player 1, please enter your name");
+                    player1.name = Console.ReadLine();
                     player2 = new ComputerPlayer();
                     break;
                 case "2":
+                    player1 = new HumanPlayer();
                     player2 = new HumanPlayer();
+                    Console.WriteLine("Player 1, please enter your name");
+                    player1.name = Console.ReadLine();
                     Console.WriteLine("Player 2, please enter your name");
                     player2.name = Console.ReadLine();
                     break;
                 default:
-                    Console.WriteLine("Error: Entered invalid number of players");
+                    Console.WriteLine("Error: Entered invalid number of players. Enter 1 or 2");
                     CreatePlayers();
                     break;
             }
@@ -107,6 +110,7 @@ namespace RockPaperScissorsLizardSpock
             else
             {
                 winningPlayer.winCount++;
+                Console.WriteLine(winningPlayer.name + " Won!");
             }
             Console.ReadLine();
             Console.WriteLine(player1.name + ": " + player1.winCount +" " + player2.name + ": " + player2.winCount);
