@@ -20,11 +20,14 @@ namespace RockPaperScissorsLizardSpock
             winCount = 0;
             gestureList = new List<Gesture>() { new Rock(), new Lizard(), new Spock(), new Scissors(), new Paper() };
         }
+
+        public abstract void ChooseGesture();
+        
     }
 
     public class HumanPlayer : Player
     {
-        public void ChooseGesture()
+        public override void ChooseGesture()
         {
             Console.WriteLine("Select a gesture: ");
             int count = 0;
